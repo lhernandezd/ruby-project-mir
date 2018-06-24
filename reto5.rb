@@ -7,7 +7,7 @@ class Game
     if inicio == "Y"
       _read
     else
-      _print("Hasta Luego!!")
+      puts "Hasta Luego!!"
     end
   end
 
@@ -23,24 +23,21 @@ class Game
         break if @word == "Correcto!"
       end
       if index.even?
-        _print("Definición")
-        _print(line)
+        puts "Definición"
+        puts line
       end
     end
+    puts "Felicitaciones!!, Acabaste el juego"
   end
 
   def _compare(line)
     if line.strip.eql? @answer
       @word = "Correcto!"
-      _print(@word)
+      puts @word
     else
       @word = "Incorrecto!, Trata de nuevo"
-      _print(@word)
+      puts @word
     end
-  end
-
-  def _print(line)
-    puts line
   end
 end
 
